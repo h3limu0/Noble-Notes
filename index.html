@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="images/icon.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noble Notes | Premium Fragrance Decants & Full Bottles</title>
+  <meta name="description" content="Discover your signature scent with Noble Notes. Premium niche and designer fragrance decants and full bottles in Bangladesh. 100% authentic, affordable luxury." />
+  <meta name="keywords" content="fragrance,perfume,decants,niche fragrance,designer perfume,Bangladesh,Creed,Aventus,Nishane" />
+  <meta property="og:title" content="Noble Notes | Premium Fragrance Decants & Full Bottles" />
+  <meta property="og:description" content="Discover your signature scent with Noble Notes. Premium niche and designer fragrance decants and full bottles." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <link rel="stylesheet" href="styles.css" />
+  
+</head>
+<body>
+  <div id="app">
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <a href="#/home" class="nav-logo">
+          <div class="nav-logo-icon"><span>N</span></div>
+          <div class="nav-logo-text">
+            <h1>Noble Notes</h1>
+            <span>Premium Decants</span>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="#/home" class="nav-link">Home</a>
+          <a href="#/decants" class="nav-link">Decants</a>
+          <a href="#/full-bottles" class="nav-link">Full Bottles</a>
+          <a href="#/contact" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="nav-btn" id="search-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+          <a href="#/cart" class="nav-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            <span class="cart-badge" id="cart-badge" style="display:none">0</span>
+          </a>
+          <button class="nav-btn" id="menu-btn" style="display:block">
+            <svg id="menu-icon-hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            <svg id="menu-icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-inner">
+          <a href="#/home" class="mobile-link" onclick="closeMobileMenu()">Home</a>
+          <a href="#/decants" class="mobile-link" onclick="closeMobileMenu()">Decants</a>
+          <a href="#/full-bottles" class="mobile-link" onclick="closeMobileMenu()">Full Bottles</a>
+          <a href="#/contact" class="mobile-link" onclick="closeMobileMenu()">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==================== SEARCH OVERLAY ==================== -->
+    <div class="search-overlay" id="search-overlay">
+      <div class="search-modal">
+        <div class="search-card">
+          <div class="search-input-wrap">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" class="search-input" id="search-input-overlay" placeholder="Search by brand, perfume name, or notes..." autofocus />
+          </div>
+          <div class="search-results" id="search-results-overlay"></div>
+        </div>
+        <div class="search-hint">
+          <p style="color:#6b7280;font-size:0.875rem">Press <kbd style="padding:0.25rem 0.5rem;background:rgba(255,255,255,0.1);border-radius:0.25rem;font-size:0.75rem">ESC</kbd> to close</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE: HOME ==================== -->
+    <div class="page active" id="page-home">
+      <!-- HERO SECTION -->
+      <section class="hero">
+        <div class="hero-bg" id="hero-bg" style="transform:translate(var(--mouse-x,0px),var(--mouse-y,0px));transition:transform 0.1s ease-out"></div>
+        <div class="hero-gradient"></div>
+        <div class="hero-dots"></div>
+        <div class="hero-glow1"></div>
+        <div class="hero-glow2"></div>
+        <div class="hero-content">
+          <h1 class="hero-title">Discover Your<br /><span class="gold-text">Signature Scent</span></h1>
+          <p class="hero-desc">Premium fragrance decants &amp; full bottles. Explore the world&rsquo;s finest niche and designer fragrances, curated for the discerning.</p>
+          <div class="hero-actions">
+            <a href="#/decants" class="btn-primary" style="font-size:1.125rem">
+              Shop Decants
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#/full-bottles" class="btn-secondary" style="font-size:1.125rem">Shop Full Bottles</a>
+          </div>
+          <div class="hero-features">
+            <div class="hero-feature"><span class="hero-feature-dot"></span><span>100% Authentic</span></div>
+            <div class="hero-feature"><span class="hero-feature-dot"></span><span>Fast Delivery*</span></div>
+            <div class="hero-feature"><span class="hero-feature-dot"></span><span>Secure Payment</span></div>
+            <div class="hero-feature"><span class="hero-feature-dot"></span><span>Premium Packaging</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAND RIBBON -->
+      <section class="brand-ribbon">
+        <div class="brand-fade-left"></div>
+        <div class="brand-fade-right"></div>
+        <div class="text-center mb-10">
+          <h2 class="section-title" style="font-size:1.875rem">Featured Brands</h2>
+          <p class="section-subtitle" style="font-size:0.875rem;margin-top:0.5rem">The world&rsquo;s most prestigious fragrance houses</p>
+        </div>
+        <div class="relative overflow-hidden">
+          <div class="brand-scroll" id="brand-scroll"></div>
+        </div>
+        <div class="text-center mt-8">
+          <p style="font-size:0.75rem;color:#6b7280;display:flex;align-items:center;justify-content:center;gap:0.5rem">
+            <span style="width:2rem;height:1px;background:rgba(212,175,55,0.3)"></span>
+            Hover over a brand to see it glow
+            <span style="width:2rem;height:1px;background:rgba(212,175,55,0.3)"></span>
+          </p>
+        </div>
+      </section>
+
+      <!-- FEATURED PRODUCTS -->
+      <section style="position:relative;padding:6rem 0;overflow:hidden">
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent,rgba(17,17,17,0.2),transparent)"></div>
+        <div style="position:relative;max-width:1280px;margin:0 auto;padding:0 1rem">
+          <div class="text-center mb-16">
+            <span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.3em;color:var(--primary);margin-bottom:1rem;display:block">Curated Selection</span>
+            <h2 class="section-title">Featured Fragrances</h2>
+            <p class="section-subtitle mt-4">Hand-picked favorites from our premium collection</p>
+          </div>
+          <div class="product-grid cols-3" id="featured-grid"></div>
+          <div class="text-center mt-12">
+            <a href="#/decants" class="btn-secondary" style="display:inline-flex;align-items:center;gap:0.5rem">
+              View All Fragrances
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY NOBLE NOTES -->
+      <section style="position:relative;padding:6rem 0;overflow:hidden">
+        <div style="position:absolute;inset:0">
+          <div style="position:absolute;top:0;left:33%;width:24rem;height:24rem;background:rgba(212,175,55,0.05);border-radius:9999px;filter:blur(100px)"></div>
+          <div style="position:absolute;bottom:0;right:25%;width:20rem;height:20rem;background:rgba(168,85,247,0.05);border-radius:9999px;filter:blur(100px)"></div>
+        </div>
+        <div style="position:relative;max-width:1280px;margin:0 auto;padding:0 1rem">
+          <div class="text-center mb-16">
+            <span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.3em;color:var(--primary);margin-bottom:1rem;display:block">Why Choose Us</span>
+            <h2 class="section-title">The Noble Notes Experience</h2>
+            <p class="section-subtitle mt-4">We bring the world&rsquo;s finest fragrances to your doorstep</p>
+          </div>
+          <div class="features-grid">
+            <div class="glass-card feature-card animate-on-scroll">
+              <div class="feature-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></div>
+              <h3 class="feature-card-title">Authentic Fragrances</h3>
+              <p class="feature-card-desc">100% genuine products sourced directly from authorized distributors and reputable suppliers.</p>
+            </div>
+            <div class="glass-card feature-card animate-on-scroll">
+              <div class="feature-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 019 9"/><path d="M4 4a16 16 0 0116 16"/><circle cx="5" cy="19" r="1"/></svg></div>
+              <h3 class="feature-card-title">Affordable Decants</h3>
+              <p class="feature-card-desc">Experience luxury without commitment. Try before you invest in a full bottle.</p>
+            </div>
+            <div class="glass-card feature-card animate-on-scroll">
+              <div class="feature-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <h3 class="feature-card-title">Secure Ordering</h3>
+              <p class="feature-card-desc">Your privacy and security are our priority. Safe and encrypted transactions.</p>
+            </div>
+            <div class="glass-card feature-card animate-on-scroll">
+              <div class="feature-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+              <h3 class="feature-card-title">Fast Delivery</h3>
+              <p class="feature-card-desc">Reliable shipping across Bangladesh with careful packaging for your precious orders.</p>
+            </div>
+            <div class="glass-card feature-card animate-on-scroll">
+              <div class="feature-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+              <h3 class="feature-card-title">Curated Collection</h3>
+              <p class="feature-card-desc">Every fragrance is hand-selected by our experts. Only the finest makes it to our shelves.</p>
+            </div>
+            <div class="glass-card feature-card animate-on-scroll">
+              <div class="feature-card-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+              <h3 class="feature-card-title">Premium Packaging</h3>
+              <p class="feature-card-desc">Each order arrives in elegant, secure packaging worthy of a luxury fragrance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section style="position:relative;padding:6rem 0;overflow:hidden">
+        <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent,rgba(17,17,17,0.3),transparent)"></div>
+        <div style="position:relative;max-width:1280px;margin:0 auto;padding:0 1rem">
+          <div class="text-center mb-16">
+            <span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.3em;color:var(--primary);margin-bottom:1rem;display:block">Testimonials</span>
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle mt-4">Hear from fragrance enthusiasts across Bangladesh</p>
+          </div>
+          <div style="max-width:48rem;margin:0 auto">
+            <div id="testimonials-container"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== PAGE: DECANTS ==================== -->
+    <div class="page" id="page-decants">
+      <div class="page-wrap">
+        <div class="page-bg"></div>
+        <div class="page-content">
+          <div class="page-title-wrap">
+            <span class="page-title-tag" id="listing-tag-decants">Niche &amp; Designer</span>
+            <h1 class="page-title" id="listing-title-decants">Fragrance Decants</h1>
+            <p class="page-subtitle" id="listing-subtitle-decants">Explore our curated collection of premium fragrance decants. Discover new scents without the full bottle commitment.</p>
+          </div>
+
+          <div class="mb-8">
+            <div class="search-bar">
+              <svg class="search-bar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" class="search-bar-input" id="search-input-decants" placeholder="Search by brand, name, or notes..." />
+            </div>
+          </div>
+
+          <div class="listing-grid">
+            <div class="listing-sidebar" id="listing-sidebar-decants"></div>
+            <div class="listing-main">
+              <p class="listing-count" id="listing-count-decants"></p>
+              <div id="listing-main-decants"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE: FULL BOTTLES ==================== -->
+    <div class="page" id="page-full-bottles">
+      <div class="page-wrap">
+        <div class="page-bg"></div>
+        <div class="page-content">
+          <div class="page-title-wrap">
+            <span class="page-title-tag" id="listing-tag-bottles">The Complete Collection</span>
+            <h1 class="page-title" id="listing-title-bottles">Full Bottles</h1>
+            <p class="page-subtitle" id="listing-subtitle-bottles">Invest in your signature scent with our collection of full bottles. Authentic fragrances from the world's most prestigious houses.</p>
+          </div>
+
+          <div class="mb-8">
+            <div class="search-bar">
+              <svg class="search-bar-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              <input type="text" class="search-bar-input" id="search-input-bottles" placeholder="Search by brand, name, or notes..." />
+            </div>
+          </div>
+
+          <div class="listing-grid">
+            <div class="listing-sidebar" id="listing-sidebar-bottles"></div>
+            <div class="listing-main">
+              <p class="listing-count" id="listing-count-bottles"></p>
+              <div id="listing-main-bottles"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE: CART ==================== -->
+    <div class="page" id="page-cart">
+      <div class="page-wrap">
+        <div class="page-bg"></div>
+        <div class="page-content" style="max-width:56rem" id="cart-page-content"></div>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE: CHECKOUT ==================== -->
+    <div class="page" id="page-checkout">
+      <div class="page-wrap">
+        <div class="page-bg"></div>
+        <div class="page-content" style="max-width:80rem">
+          <div class="text-center mb-12">
+            <span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.3em;color:var(--primary);margin-bottom:1rem;display:block">Secure Checkout</span>
+            <h1 class="page-title">Complete Your Order</h1>
+            <p class="page-subtitle" style="max-width:36rem">Fill in your details and place your order via WhatsApp. We'll confirm your order shortly.</p>
+          </div>
+          <div id="checkout-page-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE: CONTACT ==================== -->
+    <div class="page" id="page-contact">
+      <div class="page-wrap">
+        <div class="page-bg"></div>
+        <div class="page-content">
+          <div class="text-center mb-16">
+            <span style="font-size:0.75rem;text-transform:uppercase;letter-spacing:0.3em;color:var(--primary);margin-bottom:1rem;display:block">Get In Touch</span>
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">Have a question about our fragrances? Want recommendations? We'd love to hear from you.</p>
+          </div>
+
+          <div class="contact-grid">
+            <div id="contact-form-container"></div>
+
+            <div style="display:flex;flex-direction:column;gap:1.5rem">
+              <div class="glass-card contact-info-card">
+                <h3>Store Information</h3>
+                <div class="contact-info-item">
+                  <div class="contact-info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                  <div><p style="color:white;font-weight:500">Noble Notes</p><p style="color:#9ca3af;font-size:0.875rem">Dhaka, Bangladesh</p></div>
+                </div>
+                <div class="contact-info-item">
+                  <div class="contact-info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+                  <div><p style="color:white;font-weight:500">WhatsApp</p><a href="https://wa.me/8801616651333" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-size:0.875rem">01616651333</a></div>
+                </div>
+                <div class="contact-info-item">
+                  <div class="contact-info-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                  <div><p style="color:white;font-weight:500">Email</p><a href="mailto:hello@noblenotes.com" style="color:var(--primary);font-size:0.875rem">hello@noblenotes.com</a></div>
+                </div>
+              </div>
+
+              <div class="glass-card contact-info-card">
+                <h3>Our Location</h3>
+                <div class="map-placeholder">
+                  <div>
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <p>Dhaka, Bangladesh</p>
+                    <span>Map integration coming soon</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glass-card contact-info-card">
+                <h3>Business Hours</h3>
+                <div class="hours-row"><span class="hours-day">Saturday - Thursday</span><span class="hours-time">10:00 AM - 8:00 PM</span></div>
+                <div class="hours-row"><span class="hours-day">Friday</span><span class="hours-time">2:00 PM - 8:00 PM</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PAGE: PRODUCT DETAIL ==================== -->
+    <div class="page" id="page-product">
+      <div class="page-wrap">
+        <div class="page-bg"></div>
+        <div class="page-content" id="product-detail-content"></div>
+      </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="footer-bg"></div>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <div class="footer-brand-icon"><span>N</span></div>
+              <div class="footer-brand-text"><h3>Noble Notes</h3><span>Premium Fragrances</span></div>
+            </div>
+            <p class="footer-desc">Your destination for authentic premium fragrance decants and full bottles in Bangladesh. Discover your signature scent without the commitment.</p>
+            <div class="footer-social">
+              <a href="#" class="footer-social-link" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+              <a href="#" class="footer-social-link" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+              <a href="https://wa.me/8801616651333" class="footer-social-link" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#/home" class="footer-link"><span class="footer-link-dot"></span>Home</a></li>
+              <li><a href="#/decants" class="footer-link"><span class="footer-link-dot"></span>Decants</a></li>
+              <li><a href="#/full-bottles" class="footer-link"><span class="footer-link-dot"></span>Full Bottles</a></li>
+              <li><a href="#/contact" class="footer-link"><span class="footer-link-dot"></span>Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Categories</h4>
+            <ul class="footer-links">
+              <li><a href="#/decants" class="footer-link"><span class="footer-link-dot"></span>Niche Decants</a></li>
+              <li><a href="#/decants" class="footer-link"><span class="footer-link-dot"></span>Designer Decants</a></li>
+              <li><a href="#/full-bottles" class="footer-link"><span class="footer-link-dot"></span>Full Bottles</a></li>
+              <li><a href="#/decants" class="footer-link"><span class="footer-link-dot"></span>Best Sellers</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Contact</h4>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:1rem">
+              <li class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><span>Dhaka, Bangladesh</span></li>
+              <li><a href="https://wa.me/8801711086713" target="_blank" rel="noopener noreferrer" class="footer-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg><span>+880 1711-086713</span></a></li>
+              <li class="footer-contact-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span>hello@noblenotes.com</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">&copy; <span id="current-year">2026</span> Noble Notes. All rights reserved.</p>
+          <div class="footer-policy">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Shipping Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
